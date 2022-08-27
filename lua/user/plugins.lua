@@ -61,7 +61,7 @@ return packer.startup(function(use)
   use 'ray-x/go.nvim'
   use 'ray-x/guihua.lua'
   use 'mfussenegger/nvim-dap'
-  use 'leoluz/nvim-dap-go'
+  use 'dgiacomo/nvim-dap-go'
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
   use 'theHamsta/nvim-dap-virtual-text'
 
@@ -102,7 +102,6 @@ return packer.startup(function(use)
   use "tpope/vim-fugitive"
   use "tpope/vim-rhubarb" -- Open Github in a browser
   use "junegunn/gv.vim" -- Git history
-  use "AGhost-7/critiq.vim" -- Pull requests in Git
 
   use "BurntSushi/ripgrep"
   use "vimwiki/vimwiki"
