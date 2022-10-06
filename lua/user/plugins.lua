@@ -62,8 +62,8 @@ return packer.startup(function(use)
 	use("folke/which-key.nvim")
   use 'ray-x/go.nvim'
   use 'ray-x/guihua.lua'
-  use 'dgiacomo/nvim-dap'
-  use 'dgiacomo/nvim-dap-go'
+  use 'muxinc/nvim-dap'
+  use 'muxinc/nvim-dap-go'
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
   use 'theHamsta/nvim-dap-virtual-text'
 
