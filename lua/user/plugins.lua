@@ -40,7 +40,9 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
-	-- My plugins here
+  -- My plugins here
+  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
+  use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
 
 	use({ "wbthomason/packer.nvim", commit = "00ec5adef58c5ff9a07f11f45903b9dbbaa1b422" }) -- Have packer manage itself
 	use({ "nvim-lua/plenary.nvim", commit = "968a4b9afec0c633bc369662e78f8c5db0eba249" }) -- Useful lua functions used by lots of plugins
@@ -60,7 +62,7 @@ return packer.startup(function(use)
 	use("folke/which-key.nvim")
   use 'ray-x/go.nvim'
   use 'ray-x/guihua.lua'
-  use 'mfussenegger/nvim-dap'
+  use 'dgiacomo/nvim-dap'
   use 'dgiacomo/nvim-dap-go'
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
   use 'theHamsta/nvim-dap-virtual-text'
@@ -91,14 +93,9 @@ return packer.startup(function(use)
   use({ "nvim-telescope/telescope-dap.nvim", commit = "b4134fff5cbaf3b876e6011212ed60646e56f060" })
 
 	-- Treesitter
-	use({
-		"nvim-treesitter/nvim-treesitter",
-		commit = "518e27589c0463af15463c9d675c65e464efc2fe",
-	})
-
-	-- Git
-	use({ "lewis6991/gitsigns.nvim", commit = "c18e016864c92ecf9775abea1baaa161c28082c3" })
-  
+	use({"nvim-treesitter/nvim-treesitter"})
+  -- Git
+	--use({ "lewis6991/gitsigns.nvim", commit = "c18e016864c92ecf9775abea1baaa161c28082c3" })
   use "tpope/vim-fugitive"
   use "tpope/vim-rhubarb" -- Open Github in a browser
   use "junegunn/gv.vim" -- Git history
