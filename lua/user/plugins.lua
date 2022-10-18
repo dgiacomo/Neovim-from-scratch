@@ -93,9 +93,9 @@ return packer.startup(function(use)
   use({ "nvim-telescope/telescope-dap.nvim", commit = "b4134fff5cbaf3b876e6011212ed60646e56f060" })
 
 	-- Treesitter
-	use({"nvim-treesitter/nvim-treesitter"})
+	use({"nvim-treesitter/nvim-treesitter", commit = "a5dd688b5a6eb75968edd85faf3a577a3eb56fbb" })
   -- Git
-	--use({ "lewis6991/gitsigns.nvim", commit = "c18e016864c92ecf9775abea1baaa161c28082c3" })
+	use({ "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" })
   use "tpope/vim-fugitive"
   use "tpope/vim-rhubarb" -- Open Github in a browser
   use "junegunn/gv.vim" -- Git history
