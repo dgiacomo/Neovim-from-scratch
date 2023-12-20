@@ -101,7 +101,7 @@ return packer.startup(function(use)
 
 	-- Telescope
 	use { "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" }
-  use({ "nvim-telescope/telescope-dap.nvim", commit = "b4134fff5cbaf3b876e6011212ed60646e56f060" })
+  use { "nvim-telescope/telescope-dap.nvim", commit = "b4134fff5cbaf3b876e6011212ed60646e56f060" } -- Mux : enables DAP telescope integration
 
 	-- Treesitter
 	use {
@@ -111,7 +111,7 @@ return packer.startup(function(use)
 
 	-- Git
 	use { "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" }
-
+  use "github/copilot.vim"
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
