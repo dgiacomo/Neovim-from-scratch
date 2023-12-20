@@ -191,7 +191,16 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+
+  v = {
+    name = "Vimwiki",
+    t = { "<cmd>VimwikiToggleListItem<cr>", "ToggleListItem" },
+    n = { "<cmd>VimwikiDiaryNextDay<cr>", "Diary Next Day" },
+    p = { "<cmd>VimwikiDiaryPrevDay<cr>", "Diary Prev Day" },
+    -- s = { "<cmd>VimwikiSearch {prefix}<cr>", "Search /pattern/" }, : Can't take input
+  },
 }
+
 
 which_key.setup(setup)
 which_key.register(mappings, opts)
