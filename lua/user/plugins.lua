@@ -100,7 +100,12 @@ return packer.startup(function(use)
   use { "RRethy/vim-illuminate", commit = "d6ca7f77eeaf61b3e6ce9f0e5a978d606df44298" }
 
 	-- Telescope
-	use { "nvim-telescope/telescope.nvim", commit = "d90956833d7c27e73c621a61f20b29fdb7122709" }
+	use { "nvim-telescope/telescope.nvim", commit = "d90956833d7c27e73c621a61f20b29fdb7122709", 
+    requires = {
+        { "nvim-lua/plenary.nvim" },
+        { "dgiacomo/telescope-github.nvim" },
+    },
+  }
   use { "nvim-telescope/telescope-dap.nvim", commit = "4e2d5efb92062f0b865fe59b200b5ed7793833bf" } -- Mux : enables DAP telescope integration
 
 	-- Treesitter
