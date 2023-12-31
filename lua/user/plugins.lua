@@ -114,6 +114,11 @@ return packer.startup(function(use)
 		commit = "226c1475a46a2ef6d840af9caa0117a439465500",
 	}
 
+  -- Obsidian
+  use { "epwalsh/obsidian.nvim", tag = "*",  -- latest release
+    requires = { "nvim-lua/plenary.nvim" },
+  }
+
 	-- Git
 	use { "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" }
   use "github/copilot.vim"
