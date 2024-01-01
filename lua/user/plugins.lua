@@ -89,7 +89,7 @@ return packer.startup(function(use)
 
   use "BurntSushi/ripgrep"
   use "vimwiki/vimwiki"
-  use "tools-life/taskwiki"
+  --use "tools-life/taskwiki"
 
   -- TLDR
   use({ 'mrjones2014/tldr.nvim', requires = { 'nvim-telescope/telescope.nvim' } })
