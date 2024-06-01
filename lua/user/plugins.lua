@@ -88,8 +88,11 @@ return packer.startup(function(use)
   use "junegunn/gv.vim" -- Git history
 
   use "BurntSushi/ripgrep"
+  use "sharkdp/fd"
   use "vimwiki/vimwiki"
   --use "tools-life/taskwiki"
+
+  use "NeogitOrg/neogit"
 
   -- TLDR
   use({ 'mrjones2014/tldr.nvim', requires = { 'nvim-telescope/telescope.nvim' } })
