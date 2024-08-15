@@ -68,3 +68,11 @@ keymap("x", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
+keymap('i', '<C-CR>', 'copilot#Accept("")', {
+  expr = true,
+  replace_keycodes = false
+})
+
+--keymap('i', '<C-space>', 'VimwikiTableNextCell()', opts)
+
+-- vim.g.copilot_no_tab_map = true

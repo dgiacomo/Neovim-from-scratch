@@ -17,6 +17,8 @@ vim.g.indentLine_conceallevel = 2 -- indentline controlls concel
 vim.api.nvim_set_keymap("n", "<F3>", ":VimwikiDiaryPrevDay<CR>", { noremap = true, silent = true, nowait = true })
 vim.api.nvim_set_keymap("n", "<F4>", ":VimwikiDiaryNextDay<CR>", { noremap = true, silent = true, nowait = true })
 
+vim.g.vimwiki_table_mappings = 0 -- conflicts with Tab autocomplete of Copilot in markdown files
+
 vim.cmd [[
  autocmd BufNewFile */diary/????-??-??.md call New_vimwiki_diary_template()
 
