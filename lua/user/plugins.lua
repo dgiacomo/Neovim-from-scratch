@@ -55,8 +55,12 @@ return packer.startup(function(use)
   use { "windwp/nvim-autopairs" } -- Autopairs, integrates with both cmp and treesitter
   use { "numToStr/Comment.nvim", commit = "97a188a98b5a3a6f9b1b850799ac078faa17ab67" }
   use { "JoosepAlviste/nvim-ts-context-commentstring" }
-  use { "kyazdani42/nvim-web-devicons", commit = "563f3635c2d8a7be7933b9e547f7c178ba0d4352" }
-  use { "kyazdani42/nvim-tree.lua" }
+  use {
+    "nvim-tree/nvim-tree.lua",
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional
+    },
+  }
   use { "akinsho/bufferline.nvim" }
 	use { "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" }
   use { "nvim-lualine/lualine.nvim" }
@@ -100,7 +104,7 @@ return packer.startup(function(use)
 	use { "neovim/nvim-lspconfig" } -- enable LSP
   use { "williamboman/mason.nvim" } -- simple to use language server installer
   use { "williamboman/mason-lspconfig.nvim" }
-	use { "jose-elias-alvarez/null-ls.nvim" } -- for formatters and linters
+  use {"nvimtools/none-ls.nvim"}
   use { "RRethy/vim-illuminate" }
 
 	-- Telescope
