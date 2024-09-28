@@ -47,7 +47,7 @@ return packer.startup(function(use)
   use 'ray-x/guihua.lua'
   use 'muxinc/nvim-dap'
   use 'muxinc/nvim-dap-go'
-  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
   use 'theHamsta/nvim-dap-virtual-text'
 
   use { "wbthomason/packer.nvim" } -- Have packer manage itself
