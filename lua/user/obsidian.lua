@@ -25,7 +25,6 @@ obsidian.setup{
 
       -- Whether to add the output of the node_id_func to new notes in autocompletion.
       -- E.g. "[[Foo" completes to "[[foo|Foo]]" assuming "foo" is the ID of the note.
-      prepend_note_id = true
   },
   daily_notes = {
     -- Optional, if you keep daily notes in a separate directory.
@@ -87,4 +86,14 @@ obsidian.setup{
       ObsidianHighlightText = { bg = "#75662e" },
     },
   },
+  -- Removes warning on startup from deprecated completion booleans moving to functions : https://github.com/epwalsh/obsidian.nvim/pull/406
+  wiki_link_func = function(opts)
+    if opts.id == nil then
+      return string.format("[[%s]]", opts.label)
+    elseif opts.label ~= opts.id then
+      return string.format("[[%s|%s]]", opts.id, opts.label)
+    else
+      return string.format("[[%s]]", opts.id)
+    end
+  end,
 }
